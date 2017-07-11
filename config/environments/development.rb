@@ -6,6 +6,9 @@ Rails.application.configure do
   # since you don't have to restart the web server when you make code changes.
   config.cache_classes = false
 
+  FlickRaw.api_key = ENV["flickr_api_key"]
+  FlickRaw.shared_secret = ENV["flickr_shared_secret"]
+
   # Do not eager load code on boot.
   config.eager_load = false
 

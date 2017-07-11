@@ -1,0 +1,13 @@
+<h1>Flicker Photos</h1>
+<%= form_for :search, url: root_url, method: :get do |f|%>
+	<p><%= f.label :user_id%>:</p>
+	<%= f.text_field :user_id%>
+
+	<%= f.submit "Search"%>
+<%end%>
+
+<% if @photos%>
+	<%= render 'photo' %>
+<%else%>
+	<h1>No photos here</h1>
+<%end%> 
